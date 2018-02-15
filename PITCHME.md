@@ -15,23 +15,22 @@ from experience without any explicit programming.
 The various types of algorithms in Machine Learning are-
 
 * Supervised learning: These algorithms make use of labelled data to predict certain properties. They can be divided into two types:
-    * Classification, used for classifying data based on certain data parameters.
-    * Prediction, used to predict the value of a certain parameter.
+    * Classification, used for classifying data.
+    * Prediction, used to prediction of a certain value.
 
 
-* Unsupervised learning: These algorithms make use of unlabelled data to obtain patterns. Clustering and Association algorithms come under this category.
+* Unsupervised learning: These algorithms make use of unlabelled data to obtain patterns.
 
 * Semi-Supervised learning: These algorithms come in between supervised and unsupervised learning algorithms.
 
-* Reinforcement Learning: These types of algorithms aim to use the observations from the environment to take actions that either minimize the risk factor 
-  or increase the reward factor. 
+* Reinforcement Learning: These types of algorithms aim to use the observations from the environment to take actions that either minimize the risk factor.
 
 ---
 
 #### Working behind Machine Learning algorithms
 
 Most supervised learning algorithms require a target variable from which classification can be done. 
-We will illustrate this will a small classification example shown below.
+We can show this through a classification example shown below.
 (The example is adapted from scikit-learn).
 
 ```python
@@ -45,12 +44,10 @@ X = iris.data[:, :2]  # we only take the first two features.
 Y = iris.target # We make use of Y for training our algorithm
 
 h = .02  # step size in the mesh
-
 logreg = linear_model.LogisticRegression(C=1e5) # We make use of Logistic Regression for classification
 
 # we create an instance of Neighbours Classifier and fit the data.
 logreg.fit(X, Y)
-
 # Plot the decision boundary. For that, we will assign a color to each
 # point in the mesh [x_min, x_max]x[y_min, y_max].
 x_min, x_max = X[:, 0].min() - .5, X[:, 0].max() + .5
@@ -80,5 +77,18 @@ The Python code generates the plot as shown in next slide-
 ---
 
 <img src="https://cocalc.com/aa1f3474-17ab-4a1d-bf06-3ce11eadc790/raw/.smc/jupyter/blobs/a.png?sha1=4ba608ea3cbb2d287d617764d65b83a48fba4146&attempts=0">
+
+As we can see above, the datapoints(coloured in light-blue, brown and olive color) are divided into their respecitve boundaries.
+so we were able to classify the datapoints into their respective boundaries.
+---
+
+#### Applications of Machine Learning
+
+Machine Learning has been used for various field like Astronomy, Medicine, Physics etc. A few of the applications are-
+
+* Classifying stars in a picture based on brightness and size.
+* Classifiying whether a mail is a spam or not.
+* Detecting the sentiment behind a tweet or a facebook post.
+* Detecting type of peptides or RNA sequences based on certain properties.
 
 ---
